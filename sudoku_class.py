@@ -3,6 +3,7 @@
 Created on Sun Aug 22 16:09:41 2021
 
 @author: Hoang De
+
 """
 
 import os, time
@@ -47,8 +48,7 @@ class Sudoku:
                     return False
         
         return True
-        
-         
+               
     def findEmptyCell(self):
         for row in range(0, len(self._board)):
             for col in range(0, len(self._board[row])):
@@ -56,8 +56,7 @@ class Sudoku:
                     return row, col
                 
         return None
-        
-    
+            
     def solveSudoku(self):
         cur_cell = self.findEmptyCell()
         if cur_cell == None:

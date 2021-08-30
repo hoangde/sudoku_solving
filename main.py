@@ -2,13 +2,14 @@
 """
 Spyder Editor
 
-This is a auto solve sudoku game with backtracking algorithm 
+This is an auto solve sudoku game with backtracking algorithm 
+
 """
 
 from sudoku_class import Sudoku
 import os, time
 
-#Sudoku board
+#Initialize Sudoku board
 board = [
             [7, 8, 0, 4, 0, 0, 1, 2, 0],
             [6, 0, 0, 0, 7, 5, 0, 0, 9],
@@ -22,15 +23,20 @@ board = [
                                         ]
 
 if __name__ == "__main__":
+    #Create instance
     sudoku = Sudoku(board) 
+    #Display board
     sudoku.displayBoard()
     
     input("Press Enter to start solving...")
-        
+    
+    #Get start time
     start_time = time.time()
     
+    #Start solving
     sudoku.solveSudoku()
     
+    #Calculate total solving time
     solving_time = time.time() - start_time
         
     os.system('cls')
